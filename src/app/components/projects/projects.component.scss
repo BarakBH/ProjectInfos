@@ -1,0 +1,64 @@
+.projects {
+  display: grid;
+  gap: 1em;
+}
+
+.projects__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.projects__stats {
+  display: flex;
+
+  gap: 1.5em;
+}
+
+.stat {
+  background: #fff;
+  border-radius: 0.5em;
+  padding: 0.75em 1em;
+  box-shadow: 0 0.25em 0.75em rgba(0,0,0,0.06);
+}
+
+.stat__label {
+//     display: flex;
+//   justify-content: center;  
+//   text-align: center;
+  font-size: 0.85em;
+  color: #667;
+//   margin: 2em;
+}
+
+.stat__value {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.projects__filter {
+  min-width: 16em;
+}
+
+.projects__table {
+  width: 100%;
+  background: #fff;
+//   background: #f2fe23;
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 0.25em 0.75em rgba(0,0,0,0.06);
+}
+
+/* Row coloring rules */
+.row--low td {
+  background: #ffecec !important;   /* score < 70 → red */
+}
+
+.row--high td {
+  background: #e9f8ee !important;   /* score > 90 → green*/
+}

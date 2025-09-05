@@ -1,1 +1,18 @@
-<p>user-card works!</p>
+<mat-card class="user-card" *ngIf="user">
+  <div class="user-card__wrap">
+    <img class="user-card__avatar" [src]="user.avatar" alt="Avatar" />
+    <div class="user-card__info">
+      <h2 class="user-card__name">{{ user.name }}</h2>
+      <div class="user-card__meta">
+        <span>Team: {{ user.Team }}</span>
+        <span>Joined: {{ user.joinedAt }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- <button></button> -->
+</mat-card>
+
+<mat-card *ngIf="!user" class="user-card">
+  <div>No user details found. Please login.</div>
+</mat-card>

@@ -1,3 +1,4 @@
-<h2>Info</h2>
-<p *ngIf="user">Welcome, {{ user.name }} ({{ user.Team }})</p>
-<p *ngIf="!user">No personal details found. Please login.</p>
+<div class="info-page">
+  <app-user-card></app-user-card>
+  <app-projects></app-projects>
+</div>

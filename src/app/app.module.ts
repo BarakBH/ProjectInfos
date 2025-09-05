@@ -12,6 +12,13 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 
 @NgModule({
@@ -30,9 +37,17 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     FormsModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule,
+    MatTableModule,
+    MatInputModule,
+    MatSortModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true } // attach token to my http requesats
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

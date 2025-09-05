@@ -1,0 +1,31 @@
+.user-card {
+  width: 100%;
+//   background-color: #f6f7fb;
+}
+
+.user-card__wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  align-items: center;
+}
+
+.user-card__avatar {
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0.25em 0.75em rgba(0,0,0,0.15);
+}
+
+.user-card__name {
+  margin: 0 0 0.25em 0;
+}
+
+.user-card__meta {
+  display: flex;
+  gap: 1.25em;
+  color: #556;
+  font-size: 0.95em;
+//   margin: 10 0 0.25em 0;
+}

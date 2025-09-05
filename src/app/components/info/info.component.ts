@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { LoginResponse } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-info',
@@ -7,7 +8,9 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class InfoComponent {
 
-  user = this.auth.getPersonalDetails();
+user = this.auth.getPersonalDetails(); // may be null
 
   constructor(private auth: AuthService) {}
+
+  
 }
