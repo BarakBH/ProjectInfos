@@ -1,0 +1,43 @@
+<div id="login-container">
+          
+
+    <div class="form-container">
+        <img id="login-image" src="assets/one-piece-pictures.jpg" alt="Login banner" />
+    
+    <form id="login-form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        
+
+    <!-- Email -->
+    <label for="email-input">Email address</label>
+    <input id="email-input" type="email" formControlName="email" placeholder="name@example.com" />
+
+    <div id="email-errors" *ngIf="email.touched && email.invalid">
+      <div *ngIf="email.errors?.['required']">Email is required.</div>
+      <div *ngIf="email.errors?.['email']">Please enter a valid email.</div>
+      <div *ngIf="email.errors?.['nonAscii']">Email must be in English.</div>
+    </div>
+
+    <!-- Password -->
+    <label for="password-input">Password</label>
+    <input id="password-input" type="password" formControlName="password" placeholder="At least 8 chars, 1 uppercase & 1 digit" />
+
+    <div id="password-errors" *ngIf="password.touched && password.invalid">
+      <div *ngIf="password.errors?.['required']">Password is required.</div>
+      <div *ngIf="password.errors?.['minlength']">Password must be at least 8 chars.</div>
+      <div *ngIf="password.errors?.['weak']">Must contain at least one uppercase letter and one digit.</div>
+      <div *ngIf="password.errors?.['nonAscii']">Use English characters only.</div>
+    </div>
+
+    <!-- Submit -->
+    <button id="login-button" type="submit" [disabled]="form.invalid || loading">
+      <span id="login-span" *ngIf="!loading">Login</span>
+      <mat-spinner id="small-spinner" *ngIf="loading"></mat-spinner>
+    </button>
+
+    <!-- API error -->
+    <div id="api-error" *ngIf="apiError">{{ apiError }}</div>
+  </form>
+    </div>
+    <!-- <mat-spinner *ngIf="loading"></mat-spinner> -->
+
+</div>

@@ -1,0 +1,94 @@
+#login-container {
+  height: 96vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5em;
+  background: #f6f7fb;
+}
+
+#login-form {
+  width: 100%;
+  max-width: 26.25em;
+  padding: 1em 1.25em;
+  border-radius: 0 0 0.75em 0.75em; // bottom only
+  background: #fff;
+  box-shadow: 0 0.5em 1.5em rgba(0,0,0,0.08);
+  display: grid;
+  gap: 1em;
+}
+
+#login-span{
+    font-size: 1.5em;
+}
+
+#login-image {
+  display: block;
+  width: 100%;
+  max-width: 28.75em;
+  height: 100%;
+  max-height: 16em;
+  border-radius: 0.75em 0.75em 0 0; // top corners only
+}
+
+#login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  padding: 0.75em;
+  width: 100%;
+  border: none;
+  border-radius: 0.5em;
+  font-weight: 700;
+  cursor: pointer;
+  background: #6c63ff;
+  color: #fff;
+  transition: opacity .2s ease-in-out;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+
+#email-input,
+#password-input {
+  width: 91%;
+  padding: 0.75em 1em;
+  border: 0.0625em solid #cfd8dc;       
+  border-radius: 0.5em;
+  background: #f0f4f8;                 
+  font-size: 1em;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+
+#email-input:focus,
+#password-input:focus {
+  border-color: #6c63ff;                
+  background: #e8f0fe;                  
+  box-shadow: 0 0 0 0.1875em rgba(108, 99, 255, 0.2);
+  outline: none;
+}
+
+#email-input::placeholder,
+#password-input::placeholder {
+  color: #90a4ae;                       
+  font-size: 0.95em;
+}
+
+
+#email-errors,
+#password-errors,
+#api-error {
+  color: #d10000;
+  font-size: 0.85em;
+}
+
+#small-spinner {
+  width: 1.25em !important;
+  height: 1.25em !important;
+  color: black;
+}
