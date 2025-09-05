@@ -15,7 +15,10 @@ export interface Project {
 @Injectable({ providedIn: 'root' })
 export class ProjectsService {
 
-  private apiUrl = 'https://private-052d6-testapi4528.apiary-mock.com/info';
+  // private apiUrl = 'https://private-052d6-testapi4528.apiary-mock.com/info';
+  // private apiUrl = 'https://localhost:7035/api/projects';
+  private apiUrl = 'https://localhost:7035/info';
+
 
   constructor(private http: HttpClient) {}
 

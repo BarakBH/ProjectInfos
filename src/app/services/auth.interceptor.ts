@@ -16,6 +16,10 @@ export class AuthInterceptor implements HttpInterceptor {
         return next.handle(req);
   }
 
+    if (req.url.includes('/api/auth/login')) {
+    return next.handle(req);
+    }
+
     if (token) {
       const cloned = req.clone({ // clone the request and add the jwt token to send in header
         setHeaders: {

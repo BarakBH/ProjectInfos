@@ -7,8 +7,9 @@ import { SharedService } from './shared.service';
 export class AuthService {
 
 
-  private apiUrl = 'https://private-052d6-testapi4528.apiary-mock.com/authenticate';
-  //private apiUrl = this.sharedService.apiUrl;
+  // private apiUrl = 'https://private-052d6-testapi4528.apiary-mock.com/authenticate';
+  // private apiUrl = this.sharedService.apiUrl;
+  private apiUrl = 'https://localhost:7035/authenticate';
 
   private tokenKey = 'jwt';
   private personalKey = 'personalDetails';
